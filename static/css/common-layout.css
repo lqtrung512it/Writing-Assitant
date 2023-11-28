@@ -1,0 +1,61 @@
+/* Toolbar */
+.toolbar {
+    /* Box model */
+}
+
+div.toolbar {
+    justify-content: center;
+}
+
+.toolbar__item {
+    /* Box model */
+    display: flex;
+    height: 90px;
+
+    /* Visual Effect */
+    cursor: pointer;
+}
+
+.toolbar__item img {
+    /* Box model */
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: none;
+    border-radius: 100%;
+
+    /* Visual Effects */
+    overflow: visible;
+}
+
+.toolbar__item:hover img {
+    /* Visual Effects */
+    box-shadow: 0px 0px 10px #fff;
+}
+
+.highlight img {
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 10px #fff;
+}
+
+/* Input container */
+.input-container {
+    /* Box model */
+    min-height: 500px;
+    height: max-content;
+    width: 100%;
+    margin-top: 4px;
+    margin-bottom: 40px;
+    padding: 8px 24px;
+    border-radius: 20px;
+    border: none;
+
+    /* Typography */
+    font-size: 1.6rem;
+
+    /* Visual Effect */
+    background-color: var(--applied-layout);
+    box-shadow: 0 0 10px #fff;
+}

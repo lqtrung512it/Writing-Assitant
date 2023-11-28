@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<!-- Css -->
+<link rel="stylesheet" href="/static/css/common-layout.css" />
+{% block css %} {% endblock %}
+<!-- Js -->
+{% block script %} {% endblock %}
+<!-- Content -->
+{% block content %}
+<div class="toolbar row">
+    <div class="col l-1">
+        <div class="toolbar__item" id="grammar-checker">
+            <img src="/static/img/grammar.png" alt="" />
+        </div>
+    </div>
+    <div class="col l-1">
+        <div class="toolbar__item" id="plagiarism-checker">
+            <img src="/static/img/plagiarism.png" alt="" />
+        </div>
+    </div>
+    <div class="col l-1">
+        <div class="toolbar__item" id="text-completion">
+            <img src="/static/img/completion.png" alt="" />
+        </div>
+    </div>
+    <div class="col l-1">
+        <div class="toolbar__item" id="paraphraser">
+            <img src="/static/img/paraphraser.png" alt="" />
+        </div>
+    </div>
+    <div class="col l-1">
+        <div class="toolbar__item" id="translator">
+            <img src="/static/img/translator.png" alt="" />
+        </div>
+    </div>
+    <div class="col l-1">
+        <div class="toolbar__item" id="third-converter">
+            <img src="/static/img/third.png" alt="" />
+        </div>
+    </div>
+</div>
+
+<div class="input-container">{% block input %} {% endblock %}</div>
+
+{% endblock %}

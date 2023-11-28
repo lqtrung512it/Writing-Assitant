@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+<!-- Css -->
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/auth-user.css" />
+{% endblock %}
+<!-- Js -->
+{% block script %}
+<script src="/static/js/validate.js"></script>
+{% endblock %}
+<!-- Content -->
+{% block content %}
+<section>
+    <div class="form-box">
+        <div class="form-value">
+            <form action="">
+                {% if pathname == 'login' %}
+                <div class="heading">Sign In to your NoFlag account</div>
+                {% elif pathname == 'register' %}
+                <div class="heading">Sign Up for your free NoFlag account</div>
+                {% endif %}
+                <div class="input-box">
+                    <img src="/static/img/email.png" alt="" />
+                    <input
+                        type="text"
+                        id="email"
+                        placeholder="example@gmail.com"
+                    />
+                    <label for="email">Email</label>
+                </div>
+                <div class="error-message"></div>
+                <div class="input-box">
+                    <img src="/static/img/password.png" alt="" />
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                    />
+                    <label for="password">Password</label>
+                </div>
+                <div class="error-message"></div>
+                {% if pathname == 'register' %}
+                <div class="input-box">
+                    <img src="/static/img/password.png" alt="" />
+                    <input
+                        type="password"
+                        id="repassword"
+                        placeholder="Re-enter your password"
+                    />
+                    <label for="repassword">Confirm password</label>
+                </div>
+                <div class="error-message"></div>
+                {% endif %}
+                <!--  -->
+                {% if pathname == 'login' %}
+                <div class="remember">
+                    <input type="checkbox" id="remember" />
+                    <label for="remember">Remember me</label>
+                </div>
+                <input id="auth" type="submit" value="Login" />
+                <p>
+                    You don't have an account? <a href="/register">Register</a>
+                </p>
+                <div class="google-login">Click here to login by Google</div>
+
+                {% elif pathname == 'register' %}
+                <div class="agree">
+                    <input type="checkbox" id="agree" />
+                    <label for="agree">Agree with our terms and policies</label>
+                </div>
+                <input id="auth" type="submit" value="Register" />
+                <p>You already have an account? <a href="/login">Login</a></p>
+                <div class="google-login">Click here to login by Google</div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

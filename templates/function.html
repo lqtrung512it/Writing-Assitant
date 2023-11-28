@@ -1,0 +1,58 @@
+{% extends 'common-layout.html' %}
+<!-- Css -->
+{% block css %}
+<link rel="stylesheet" href="/static/css/common-layout.css" />
+<link rel="stylesheet" href="/static/css/function.css" />
+{% endblock %}
+<!-- Js -->
+{% block script %}
+<script src="/static/js/function.js"></script>
+<script src="/static/js/user-input.js"></script>
+{% endblock %}
+<!-- Content -->
+{% block input %}
+<div class="option">
+    <div class="languages">
+        <div class="language" id="english">
+            <img src="/static/img/united-kingdom.png" alt="" />
+        </div>
+        <div class="language" id="spanish">
+            <img src="/static/img/spain.png" alt="" />
+        </div>
+        <div class="language" id="deutsch">
+            <img src="/static/img/germany.png" alt="" />
+        </div>
+    </div>
+    <div class="page-name">{{page_name}}</div>
+    <div class="drag"></div>
+</div>
+<div class="page-description">{{page_description}}</div>
+<div class="input-field">
+    <form action="" id="input-form">
+        <div class="text-field">
+            <div class="input-button">
+                <div
+                    contenteditable="true"
+                    id="first-user-input"
+                    placeholder="Enter your text here!"
+                ></div>
+                <input type="submit" value="{{submit}}" />
+            </div>
+
+            <div id="system-response">
+                {% if pathname == 'plagiarism-checker' %}
+                <div class="percentage">
+                    <p class="heading">Your plagiarism score:</p>
+                    <p class="score"></p>
+                </div>
+                <div class="sources">
+                    <p class="heading"></p>
+                    <ol class="list"></ul>
+                </div>
+                {% else %} The result {% endif %}
+            </div>
+            <span class="first-word-count"></span>
+        </div>
+    </form>
+</div>
+{% endblock %}

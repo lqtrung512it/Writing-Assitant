@@ -1,0 +1,148 @@
+:root {
+    --primary: #e8d9b7;
+
+    /* Applied */
+    --applied-bgc: #f1f1f1;
+    --applied-layout: #322d45;
+    --applied-text: #333;
+    --applied-highlight: #e0e0e0;
+    --applied-primary: orange;
+}
+
+* {
+    /* Box model */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* Typography */
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    /* Visual Effects */
+    background-image: url(/static/img/background.jpg);
+}
+
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    border-radius: 10px;
+    background-color: #e8d9b7;
+}
+
+::-webkit-scrollbar {
+    border-radius: 10px;
+
+    width: 5px;
+    background-color: #e8d9b7;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    background-color: #322d45;
+}
+
+.header {
+    /* Positioning */
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    /* Box model */
+    display: flex;
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__brand {
+    /* Box model */
+    display: flex;
+    align-items: center;
+
+    /* Visual Effects */
+    cursor: pointer;
+}
+
+.header img {
+    /* Box model */
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+
+    /* Visual Effects */
+}
+
+.header .header__brand-logo {
+    /* Box model */
+    width: 40px;
+    height: 40px;
+
+    /* Visual Effects */
+    overflow: visible;
+}
+
+.header__brand-name {
+    /* Box model */
+    margin-left: 8px;
+
+    /* Typography */
+    font-size: 28px;
+}
+
+.header__brand-name {
+    /* Typography */
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.header__page {
+    /* Box model */
+    margin: 0 auto;
+
+    /* Typography */
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--applied-text);
+    text-align: center;
+}
+
+.header__auth {
+    /* Box model */
+    display: flex;
+}
+
+.header__auth img {
+    /* Box model */
+    margin: 0 8px;
+    height: 32px;
+    width: 32px;
+    border-radius: 0;
+
+    /* Visual Effect */
+    cursor: pointer;
+}
+
+main {
+    /* Box model */
+    height: max-content;
+    margin-top: 53px;
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .header__page {
+        display: none;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+}

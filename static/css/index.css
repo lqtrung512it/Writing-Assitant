@@ -1,0 +1,51 @@
+.main-page {
+  /* Typography */
+  text-align: center;
+}
+
+.main-page .function {
+  /* Box Model */
+  margin: 2.4rem;
+}
+
+.main-page .function .heading {
+  /* Box Model */
+  margin: 1.2rem 0;
+
+  /* Typography */
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--applied-primary);
+}
+
+.main-page .function .sub-heading {
+  /* Box Model */
+  margin: 0.8rem 0;
+
+  /* Typography */
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--applied-primary);
+}
+
+.main-page .function .description {
+  /* Box Model */
+  margin: 1.2rem 20%;
+  width: 60%;
+
+  /* Typography */
+  font-size: 1.6rem;
+  color: var(--applied-text);
+}
+
+.main-page hr {
+  /* Box Model */
+  height: 1px;
+  border: none;
+
+  /* Typography */
+  color: var(--applied-text);
+
+  /* Visual Effect */
+  background-color: var(--applied-text);
+}

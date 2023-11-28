@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="/static/img/favicon.png" />
+        <title>{{title}}</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- CSS -->
+        <link rel="stylesheet" href="/static/css/base.css" />
+        <link rel="stylesheet" href="/static/css/grid.css" />
+        {% block css %} {% endblock %}
+        <!-- JS -->
+        <script src="/static/js/script.js"></script>
+        {% block script %} {% endblock %}
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="header__brand">
+                <img
+                    class="header__brand-logo"
+                    src="/static/img/logo.png"
+                    alt="Logo"
+                />
+                <div class="header__brand-name">NoPlag</div>
+            </div>
+            <div class="header__auth">
+                <img
+                    class="header__history"
+                    src="/static/img/history.png"
+                    alt=""
+                />
+                <img
+                    class="header__logout"
+                    src="/static/img/logout.png"
+                    alt=""
+                />
+                <img
+                    class="header__auth-user"
+                    src="/static/img/user.png"
+                    alt=""
+                />
+            </div>
+        </header>
+
+        <!-- 
+      Column: .col
+      Prefix class:
+        -c - mobile
+        -m - tablet
+        -l - pc
+     -->
+        <div class="grid wide">
+            <!-- Main -->
+            <main></main>
+
+            {% block content %} {% endblock %}
+
+            <!-- Footer -->
+            <footer></footer>
+        </div>
+    </body>
+</html>

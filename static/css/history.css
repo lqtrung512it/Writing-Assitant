@@ -1,0 +1,126 @@
+section {
+    /* Box model */
+    display: flex;
+    min-height: 90vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    /* Visual Effect */
+    /* background-color: var(--applied-layout); */
+}
+
+.history-view {
+    /* Positioning */
+    position: relative;
+    display: flex;
+
+    /* Box Model */
+    width: 1200px;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    border-radius: 50px;
+
+    /* Visual Effect */
+    background-color: var(--applied-layout);
+    box-shadow: 0 0 10px #aaa;
+}
+
+.history-view .heading {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-top: 16px;
+    color: #e8d9b7;
+    font-weight: bold;
+}
+
+.history-view label {
+    font-size: 14px;
+    color: #e8d9b7;
+    margin-top: 8px;
+}
+
+.history-view #select-option {
+    width: 200px;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 450;
+    padding: 6px 10px;
+    border: none;
+    appearance: none;
+    color: #322d45;
+
+    background-color: #e8d9b7;
+}
+
+.history-view #select-option:focus {
+    outline: none;
+}
+
+.history-view #select-option option {
+    font-size: 14px;
+    padding: 8px;
+    font-weight: 450;
+}
+
+.history-view #table-container {
+    width: 90%;
+    margin-top: 20px;
+    height: 440px;
+    background-color: #e8d9b7;
+    border: none;
+    border-radius: 20px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.history-view #table-container table {
+    width: 100%;
+    font-size: 16px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.history-view #table-container table thead tr th {
+    font-size: 16px;
+    padding: 10px 0;
+    border-bottom: 2px solid #322d45;
+}
+
+.history-view #table-container table tbody tr td {
+    height: max-content;
+    font-size: 14px;
+    word-wrap: break-word;
+    padding: 20px 10px;
+    border-bottom: 1px solid #322d45;
+    text-align: center;
+}
+
+.history-view #table-container table tbody tr td:nth-child(3) {
+    text-align: left;
+}
+
+.history-view #table-container table tbody tr td .percentage {
+    text-align: center;
+    font-size: 20px;
+    color: #b95b76;
+    margin-bottom: 6px;
+}
+
+.history-view #table-container table tbody tr td ol li {
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.history-view #table-container table tbody tr td ol li a {
+    font-size: 14px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+.history-view #table-container table tbody tr td ol li a:hover {
+    color: #b95b76;
+}

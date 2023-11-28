@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!-- Css -->
+
+{% block css %}
+<link rel="stylesheet" href="/static/css/history.css" />
+{% endblock %}
+<!-- Js -->
+{% block script %}
+<script src="/static/js/history.js"></script>
+{% endblock %}
+<!-- Content -->
+{% block content %}
+<section>
+    <div class="history-view">
+        <div class="heading">{{page_name}}</div>
+
+        <label for="select-option"></label>
+        <select id="select-option" name="select-option" required>
+            <option value="0">All</option>
+            <option value="grammar-checker">Grammar Check</option>
+            <option value="plagiarism-checker">Plagiarism Check</option>
+            <option value="text-completion">Text Completion</option>
+            <option value="paraphraser">Paraphraser</option>
+            <option value="translator">Translator</option>
+            <option value="third-converter">Third-person Converter</option>
+        </select>
+        <div id="table-container"></div>
+    </div>
+</section>
+
+{% endblock %}
